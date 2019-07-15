@@ -15,7 +15,7 @@
             <script async src="http://localhost:5000" charset="utf-8"></script>
 	<script>
 		var xhttp = new XMLHttpRequest();
-		xhttp.open("GET", "http://app:5000/", false);
+		xhttp.open("GET", window.location.protocol + "//" + window.location.hostname + ":5000/", false);
 		xhttp.send();
 		document.getElementById("demo").innerHTML = xhttp.responseText;
 	</script>
