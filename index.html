@@ -1,0 +1,25 @@
+<html>
+    <head>
+    </head>
+
+    <body>
+            <center><h1>Burek frontend app!</h1></center>
+
+                <p>
+
+                Welcome to frontend app
+
+                <p>
+		<p id="demo"></p>
+
+            <script async src="http://localhost:5000" charset="utf-8"></script>
+	<script>
+		var xhttp = new XMLHttpRequest();
+		xhttp.open("GET", "http://localhost:5000/", false);
+		xhttp.send();
+		document.getElementById("demo").innerHTML = xhttp.responseText;
+	</script>
+        
+    </body>
+
+</html>

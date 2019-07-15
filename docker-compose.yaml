@@ -1,0 +1,17 @@
+version: '3'
+services:
+  web:
+    image: "itspektar/burek-frontend:latest"
+    ports:
+      - "50080:80"
+      - "50443:443"
+    depends_on:
+      - app
+  app:
+    image: "itspektar/burek:latest"
+    ports:
+      - "5000:5000"
+    depends_on:
+      - redis
+  redis:
+    image: "redis:alpine"
