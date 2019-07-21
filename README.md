@@ -20,3 +20,11 @@ kubectl expose -f web-deployment.yaml --type=LoadBalancer --name=web
 curl localhost:5000 # for backend or open in browser
 curl localhost # for frontend or open in browser
 ```
+or creating one pod that encapsulates all
+```bash
+kubectl apply -f burek-pod.yaml
+kubectl expose pod burek-pod --type=LoadBalancer --name=burek
+curl localhost:5000 # for backend or open in browser
+curl localhost # for frontend or open in browser
+```
+

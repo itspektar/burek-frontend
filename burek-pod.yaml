@@ -1,0 +1,21 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  labels:
+    io.kompose.service: burek
+  name: burek-pod
+spec:
+  containers:
+  - name: frontend
+    image: itspektar/burek-frontend:latest
+    ports:
+    - containerPort: 80
+  - name: backend
+    image: itspektar/burek-backend:latest
+    ports:
+    - containerPort: 5000
+  - name: redis
+    ports:
+    - containerPort: 6379
+    image: redis:alpine
+status: {}
